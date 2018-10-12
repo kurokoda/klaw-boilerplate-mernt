@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-prettier  --single-quote --write ./server/**/{*,*.test}.{js,jsx,json,css} ./src/**/{*,*.test}.{js,jsx,json,css}
+prettier --write ./src/**/{*,*.test}.{js,jsx,ts,tsx,json,css} ./server/**/{*,*.test}.{js,jsx,ts,tsx,json,css}

@@ -3,13 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@redux-beacon/google-analytics": "^1.1.0",
+    "@redux-beacon/google-tag-manager": "^1.0.1",
+    "@types/history": "^4.7.1",
+    "@types/react-loadable": "^5.4.1",
+    "@types/react-redux": "^6.0.9",
+    "@types/redux-persist": "^4.3.1",
+    "aphrodite": "^2.2.3",
     "bootstrap": "3",
+    "connected-react-router": "^4.5.0",
+    "history": "^4.7.2",
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
-    "react-scripts-ts": "3.1.0"
+    "react-frontload": "^1.0.3",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-scripts-ts": "3.1.0",
+    "redux": "^4.0.0",
+    "redux-beacon": "^2.0.3",
+    "redux-persist": "^5.10.0",
+    "redux-persist-transform-immutable": "^5.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.11",
@@ -39,12 +57,12 @@
   },
   "lint-staged": {
     "./server/**/{*,*.test}.{js,jsx,json,css} ./src/**/{*,*.test}.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
+      "prettier --write",
       "git add"
     ]
   },
   "scripts": {
-    "build": "./bin/startApplication.sh",
+    "build": "./bin/buildApplication.sh",
     "document": "yarn run storybook:build ; yarn run styleguide:build",
     "format": "./bin/formatApplication.sh",
     "lint": "./bin/lintApplication.sh",

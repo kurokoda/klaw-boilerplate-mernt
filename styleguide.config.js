@@ -1,8 +1,8 @@
 module.exports = {
   sections: [
     {
-      name: "Components",
-      components: "src/component/**/*.{jsx,tsx}"
+      components: "src/component/**/*.{jsx,tsx}",
+      name: "Components"
     }
   ]
 };
