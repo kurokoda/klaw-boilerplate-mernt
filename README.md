@@ -1,3 +1,16 @@
+## Setup 
+
+In order to run the bash scripts used by Yarn from the command line, you must modify the permissions for those files. Run the following commant in your terminal:
+ 
+ `chmod +x ./bin/buildApplication.sh ./bin/startApplication.sh ./bin/testApplication.sh ./bin/formatApplication.sh ./bin/lintApplication.sh
+`
+
+Install your application dependencies
+
+`yarn install`
+
+.......
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
