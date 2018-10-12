@@ -4,16 +4,17 @@ import * as React from "react";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 import { getIncrementedElementName } from "../../../utils/collection";
+import ROUTES from "../../../constants/route";
 
 /**
  * A responsive horizontal menu for navigating the application's pages
  */
 class LinksDesktop extends React.Component<any, any> {
   render() {
-    const { topics, onNavLinkClick } = this.props;
+    const { onNavLinkClick } = this.props;
     return (
       <div className={css(styles.links)}>
-        {topics.map(item => (
+        {ROUTES.map(ROUTE => (
           <div
             key={getIncrementedElementName("desktopLink")}
             onClick={onNavLinkClick}
@@ -23,11 +24,11 @@ class LinksDesktop extends React.Component<any, any> {
             tabIndex={0}
           >
             <NavLink
-              to={item.route}
+              to={ROUTE.PATH}
               activeClassName={css(styles.activeLink)}
               className={css(styles.link)}
             >
-              {item.text.toUpperCase()}
+              {ROUTE.NAME.toUpperCase()}
             </NavLink>
           </div>
         ))}
@@ -58,9 +59,7 @@ class LinksDesktop extends React.Component<any, any> {
 
 LinksDesktop.propTypes = {
   /** The navigation link onClick callback */
-  onNavLinkClick: PropTypes.func.isRequired,
-  /** The application page configs */
-  topics: PropTypes.arrayOf(PropTypes.shape({})).isRequired
+  onNavLinkClick: PropTypes.func.isRequired
 };
 
 export default withRouter(LinksDesktop);

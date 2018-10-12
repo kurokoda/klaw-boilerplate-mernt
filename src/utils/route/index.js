@@ -5,6 +5,7 @@ import ROUTE_STRING from "../../constants/route";
 const baseUrl = process.env.REACT_APP_JUGGERNAUT_API_BASE_URL;
 
 export const getHomePageDataUrl = () => `${baseUrl}/api/page/home`;
+export const getAboutPageDataUrl = () => `${baseUrl}/api/page/about`;
 
 export const getApiUrlForRoute = url => {
   const isHomeRoute = ROUTE_REGEX.HOME_PAGE_DATA.test(url);

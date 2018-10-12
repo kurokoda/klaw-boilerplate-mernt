@@ -17,7 +17,9 @@ class App extends React.Component<any, any> {
    * @returns {boolean} The evaluation to determine whether the component should
    * update when its props change
    */
-  public shouldComponentUpdate = () => true;
+  public shouldComponentUpdate() {
+    return true;
+  }
 
   public render() {
     return (

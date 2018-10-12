@@ -1,3 +1,4 @@
+import aboutPageData from "./aboutPageData";
 import homePageData from "./homePageData";
 
 const rehydrated = (state = false, action) => {
@@ -10,6 +11,7 @@ const rehydrated = (state = false, action) => {
 };
 
 export default {
+  aboutPageData,
   homePageData,
   rehydrated
 };

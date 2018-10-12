@@ -9,7 +9,17 @@ const HOME = {
     modules: ["home"]
   }),
   NAME: "home",
-  ROUTE: "/"
+  PATH: "/"
 };
 
-export default [HOME];
+const ABOUT = {
+  COMPONENT: Loadable({
+    loader: () => import("../../container/page/about"),
+    loading: Loading,
+    modules: ["about"]
+  }),
+  NAME: "about",
+  PATH: "/about"
+};
+
+export default [HOME, ABOUT];
