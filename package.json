@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts-ts": "3.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "@types/node": "^10.11.7",
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.9",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-prettier": "^3.0.1",
@@ -18,18 +24,21 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.1.0",
-    "prettier": "^1.13.4",
-    "@types/jest": "^23.3.5",
-    "@types/node": "^10.11.7",
-    "@types/react": "^16.4.16",
-    "@types/react-dom": "^16.0.9",
+    "prettier": "^1.14.3",
     "typescript": "^3.1.3"
+  },
+  "lint-staged": {
+       "./server/**/{*,*.test}.{js,jsx,json,css} ./src/**/{*,*.test}.{js,jsx,json,css}": [
+       "prettier --single-quote --write",
+       "git add"
+     ]
   },
   "scripts": {
     "start": "./bin/startApplication.sh",
     "build": "./bin/startApplication.sh",
     "test": "./bin/testApplication.sh",
     "lint": "./bin/lintApplication.sh",
-    "format": "./bin/formatApplication.sh"
+    "format": "./bin/formatApplication.sh",
+    "precommit": "lint-staged"
   }
 }
