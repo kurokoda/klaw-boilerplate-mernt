@@ -1,5 +1,5 @@
 export const AnalyticActions = {
-  PAGE_VIEW: 'PAGE_VIEW'
+  PAGE_VIEW: "PAGE_VIEW"
 };
 
 export const googleTagManagerEventsMap = {
@@ -13,7 +13,7 @@ export function callAnalyticAction(type, payload = {}) {
 }
 
 function pageView() {
-  const hitType = 'pageview';
+  const hitType = "pageview";
   return { hitType };
 }
 

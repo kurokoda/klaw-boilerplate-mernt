@@ -1,11 +1,11 @@
 import { css, StyleSheet } from "aphrodite";
-import React, { Component } from "react";
+import * as React from "react";
 
 /**
  * A loading indication which displays the Tylt logo
  * @returns {xml} The Loading component
  */
-class Loading extends Component {
+class Loading extends React.Component<any, any> {
   /**
    * Controls updates and rendering
    * @returns {boolean} The evaluation to determine whether the component should

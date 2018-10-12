@@ -1,5 +1,5 @@
-export const SERVER_SIDE_RENDER = 'SERVER_SIDE_RENDER';
-export const CLIENT_SIDE_RENDER = 'CLIENT_SIDE_RENDER';
+export const SERVER_SIDE_RENDER = "SERVER_SIDE_RENDER";
+export const CLIENT_SIDE_RENDER = "CLIENT_SIDE_RENDER";
 
 /**
  * Action dispatched when article application is rendered on the client.

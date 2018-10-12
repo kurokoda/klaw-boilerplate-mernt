@@ -1,22 +1,34 @@
+/* eslint-disable react/prefer-stateless-function */
+
 import * as React from "react";
-import "./index.css";
+import { withRouter } from "react-router";
+import Body from "../../container/body";
+import Footer from "../../container/footer";
+import Header from "../../container/header";
+import Helmet from "./helmet";
 
-import logo from "./logo.svg";
+/**
+ * This is the top-level application component. It acts as the root of the component tree
+ */
 
-class App extends React.Component {
+class App extends React.Component<any, any> {
+  /**
+   * Controls updates and rendering
+   * @returns {boolean} The evaluation to determine whether the component should
+   * update when its props change
+   */
+  public shouldComponentUpdate = () => true;
+
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <main>
+        <Helmet />
+        <Header {...this.props} />
+        <Body {...this.props} />
+        <Footer {...this.props} />
+      </main>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -2,6 +2,7 @@
   "extends": ["airbnb", "react-app", "prettier"],
   "plugins": ["prettier"],
   "rules": {
+    "import/extensions": 0,
     "import/prefer-default-export": 0,
     "jsx-a11y/href-no-hash": [0],
     "react/prefer-stateless-function": 0,
