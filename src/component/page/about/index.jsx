@@ -114,19 +114,6 @@ AboutPage.getClasses = () => {
   };
 };
 
-AboutPage.propTypes = {
-  /** Dispatches action to request page data */
-  fetchPageData: PropTypes.func.isRequired,
-  /** Dispatches action to notify of page data request failure */
-  fetchPageDataError: PropTypes.func.isRequired,
-  /** Dispatches action to notify of page data request success */
-  fetchPageDataSuccess: PropTypes.func.isRequired,
-  /** Dispatches action to request page data deletion */
-  flushPageData: PropTypes.func.isRequired,
-  /** Page data */
-  pageData: ImmutablePropTypes.map
-};
-
 AboutPage.defaultProps = {
   pageData: null
 };

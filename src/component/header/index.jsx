@@ -1,7 +1,6 @@
 import { css, StyleSheet } from "aphrodite";
 import * as React from "react";
 import { withRouter } from "react-router";
-import * as ReactRouterPropTypes from "react-router-prop-types";
 import LinksDesktop from "./links/desktop";
 import LinksMobile from "./links/mobile";
 
@@ -63,11 +62,6 @@ class Header extends React.Component<any, any> {
 }
 
 export default withRouter(Header);
-
-Header.propTypes = {
-  /** The application router's history */
-  history: ReactRouterPropTypes.history.isRequired
-};
 
 const styles = StyleSheet.create({
   desktopLinks: {

@@ -3,7 +3,6 @@ import * as PropTypes from "prop-types";
 import * as React from "react";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import * as ReactRouterPropTypes from "react-router-prop-types";
 import { getIncrementedElementName } from "../../../utils/collection";
 
 /**
@@ -147,21 +146,6 @@ class LinksMobile extends React.Component<any, any> {
     onNavLogoClick();
   };
 }
-
-LinksMobile.propTypes = {
-  /** The application router's history */
-  history: ReactRouterPropTypes.history.isRequired,
-  /** The navigation header onClick callback */
-  onNavHeaderClick: PropTypes.func.isRequired,
-  /** The navigation link onClick callback */
-  onNavLinkClick: PropTypes.func.isRequired,
-  /** The navigation logo onClick callback */
-  onNavLogoClick: PropTypes.func.isRequired,
-  /** The navigation menu button onClick callback */
-  onNavMenuButtonClick: PropTypes.func.isRequired,
-  /** The application page configs */
-  topics: PropTypes.arrayOf(PropTypes.shape({})).isRequired
-};
 
 export default withRouter(LinksMobile);
 

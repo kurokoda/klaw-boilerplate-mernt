@@ -22,4 +22,14 @@ const ABOUT = {
   PATH: "/about"
 };
 
+export const ERROR = {
+  COMPONENT: Loadable({
+    loader: () => import("../../container/page/error"),
+    loading: Loading,
+    modules: ["error"]
+  }),
+  NAME: "error",
+  PATH: "/error"
+};
+
 export default [HOME, ABOUT];

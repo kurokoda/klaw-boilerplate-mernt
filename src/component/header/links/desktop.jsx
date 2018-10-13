@@ -57,11 +57,6 @@ class LinksDesktop extends React.Component<any, any> {
   }
 }
 
-LinksDesktop.propTypes = {
-  /** The navigation link onClick callback */
-  onNavLinkClick: PropTypes.func.isRequired
-};
-
 export default withRouter(LinksDesktop);
 
 const styles = StyleSheet.create({
