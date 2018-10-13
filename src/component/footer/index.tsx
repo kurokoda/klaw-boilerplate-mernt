@@ -12,33 +12,26 @@ class Footer extends React.Component<any, any> {
    * @returns {boolean} The evaluation to determine whether the component should
    * update when its props change
    */
-  shouldComponentUpdate = () => true;
+  public shouldComponentUpdate(){
+    return true;
+  }
 
-  render() {
+  public render() {
     return (
-      <div name="footer" className={css(styles.footer)}>
-        <div name="logo" className={css(styles.container)}>
-          <div name="logo" className={css(styles.logo)} />
-          <div
-            name="socialMediaIcons"
-            className={css(styles.socialMediaIconContainer)}
-          >
+      <div className={css(styles.footer)}>
+        <div className={css(styles.container)}>
+          <div className={css(styles.logo)} />
+          <div className={css(styles.socialMediaIconContainer)}>
             <a
-              name="facebook"
               href="http://www.facebook.com"
               className={css(styles.contentColor)}
             >
               <i className="fab fa-facebook" />
             </a>
-            <a
-              name="twitter"
-              href="http://twitter.com"
-              className={css(styles.contentColor)}
-            >
+            <a href="http://twitter.com" className={css(styles.contentColor)}>
               <i className="fab fa-twitter" />
             </a>
             <a
-              name="instagram"
               href="http://www.instagram.com"
               className={css(styles.contentColor)}
             >
