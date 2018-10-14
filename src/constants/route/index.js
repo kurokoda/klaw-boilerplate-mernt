@@ -2,7 +2,7 @@ import Loadable from "react-loadable";
 import Loading from "../../component/loading";
 
 // webpackChunkName: "home"
-const HOME = {
+export const HOME = {
   COMPONENT: Loadable({
     loader: () => import("../../container/page/home"),
     loading: Loading,
@@ -12,7 +12,7 @@ const HOME = {
   PATH: "/"
 };
 
-const ABOUT = {
+export const ABOUT = {
   COMPONENT: Loadable({
     loader: () => import("../../container/page/about"),
     loading: Loading,
@@ -32,4 +32,4 @@ export const ERROR = {
   PATH: "/error"
 };
 
-export default [HOME, ABOUT];
+export default [ABOUT];

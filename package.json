@@ -15,6 +15,7 @@
     "connected-react-router": "^4.5.0",
     "history": "^4.7.2",
     "husky": "^1.1.2",
+    "informed": "^1.10.7",
     "lint-staged": "^7.3.0",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",

@@ -2,26 +2,20 @@ import { css, StyleSheet } from "aphrodite";
 import * as React from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import { Route, Switch } from "react-router-dom";
-import ROUTES, {ERROR} from "../../constants/route";
+import { ABOUT, ERROR, HOME} from "../../constants/route";
 
 class Body extends React.Component<{} & RouteComponentProps<any>> {
   public render() {
     const styles = this.getStyles({
       footerHeight: 60,
-      headerHeight: 60
+      headerHeight: 60,
     });
 
     return (
       <div className={css(styles.container)}>
         <Switch>
-          {ROUTES.map(ROUTE => (
-            <Route
-              component={ROUTE.COMPONENT}
-              exact={true}
-              path={ROUTE.PATH}
-              props={this.props}
-            />
-          ))}
+          <Route path={HOME.PATH} exact={true} component={HOME.COMPONENT} props={this.props} />
+          <Route path={ABOUT.PATH} component={ABOUT.COMPONENT} props={this.props} />
           <Route component={ERROR} />
         </Switch>
       </div>
