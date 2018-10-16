@@ -7,28 +7,28 @@ import { withRouter } from "react-router";
  */
 
 class Footer extends React.Component<any, any> {
-  /**
-   * Controls updates and rendering
-   * @returns {boolean} The evaluation to determine whether the component should
-   * update when its props change
-   */
-  public shouldComponentUpdate(){
+  private styles = this.getStyles();
+
+  public shouldComponentUpdate() {
     return true;
   }
 
   public render() {
     return (
-      <div className={css(styles.footer)}>
-        <div className={css(styles.container)}>
-          <div className={css(styles.logo)} />
-          <div className={css(styles.socialMediaIconContainer)}>
+      <div className={css(this.styles.footer)}>
+        <div className={css(this.styles.container)}>
+          <div className={css(this.styles.logo)} />
+          <div className={css(this.styles.socialMediaIconContainer)}>
             <a
               href="http://www.facebook.com"
-              className={css(styles.contentColor)}
+              className={css(this.styles.contentColor)}
             >
               <i className="fab fa-facebook" />
             </a>
-            <a href="http://twitter.com" className={css(styles.contentColor)}>
+            <a
+              href="http://twitter.com"
+              className={css(this.styles.contentColor)}
+            >
               <i className="fab fa-twitter" />
             </a>
             <a
@@ -38,10 +38,10 @@ class Footer extends React.Component<any, any> {
               <i className="fab fa-instagram" />
             </a>
           </div>
-          <div className={css([styles.content, styles.contentColor])}>
+          <div className={css([this.styles.content, this.styles.contentColor])}>
             © 2018 THE COMPANY
           </div>
-          <div className={css([styles.content, styles.contentColor])}>
+          <div className={css([this.styles.content, this.styles.contentColor])}>
             Use of and/or registration on any portion of this site constitutes
             acceptance of our &nbsp;
             <a href="http://www.advance.net/advancelocalUserAgreement/user-agreement.html">
@@ -53,7 +53,7 @@ class Footer extends React.Component<any, any> {
             </a>
             (updated 05/25/18).
           </div>
-          <div className={css([styles.content, styles.contentColor])}>
+          <div className={css([this.styles.content, this.styles.contentColor])}>
             © 2018 Advance Local Media LLC. All rights reserved
             <a href="https://www.advancelocal.com/about-us/">&nbsp; About Us</a>
             .<br />
@@ -63,7 +63,7 @@ class Footer extends React.Component<any, any> {
           </div>
           <a
             href="https://www.advance.net/advancelocalUserAgreement/privacy-policy.html#california_top/"
-            className={css(styles.content)}
+            className={css(this.styles.content)}
           >
             Your California Privacy Rights
           </a>
@@ -71,71 +71,73 @@ class Footer extends React.Component<any, any> {
       </div>
     );
   }
+
+  private getStyles() {
+    return StyleSheet.create({
+      container: {
+        alignItems: "center",
+        bottom: "0",
+        display: "flex",
+        flexDirection: "column",
+        height: "350px",
+        justifyContent: "space-between",
+        left: "0",
+        margin: "auto",
+        maxWidth: "746px",
+        position: "absolute",
+        right: "0",
+        textAlign: "center",
+        top: "0",
+        width: "100%",
+
+        "@media (max-width: 768px)": {
+          height: "410px"
+        }
+      },
+      content: {
+        fontFamily: "Open Sans",
+        fontSize: "14px",
+
+        "@media (max-width: 768px)": {
+          fontSize: "12px",
+          padding: "10px"
+        }
+      },
+      contentColor: {
+        color: "#ffffff;"
+      },
+      footer: {
+        backgroundColor: "#000000",
+        color: "#FFFFFF",
+        height: "461px",
+        margin: "50px 0 0 0",
+        position: "relative"
+      },
+
+      logo: {
+        backgroundRepeat: "no-repeat",
+        height: "69px",
+        width: "110px",
+
+        "@media (max-width: 768px)": {
+          height: "90px",
+          margin: "0 0 35px 0"
+        }
+      },
+      socialMediaIconContainer: {
+        display: "flex",
+        fontSize: "25px",
+        justifyContent: "space-around",
+        width: "200px",
+
+        "@media (max-width: 768px)": {
+          fontSize: "35px",
+          margin: "0 0 35px 0",
+          width: "180px"
+        }
+      }
+    });
+  }
 }
 
 export default withRouter(Footer);
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    bottom: "0",
-    display: "flex",
-    flexDirection: "column",
-    height: "350px",
-    justifyContent: "space-between",
-    left: "0",
-    margin: "auto",
-    maxWidth: "746px",
-    position: "absolute",
-    right: "0",
-    textAlign: "center",
-    top: "0",
-    width: "100%",
-
-    "@media (max-width: 768px)": {
-      height: "410px"
-    }
-  },
-  content: {
-    fontFamily: "Open Sans",
-    fontSize: "14px",
-
-    "@media (max-width: 768px)": {
-      fontSize: "12px",
-      padding: "10px"
-    }
-  },
-  contentColor: {
-    color: "#ffffff;"
-  },
-  footer: {
-    backgroundColor: "#000000",
-    color: "#FFFFFF",
-    height: "461px",
-    margin: "50px 0 0 0",
-    position: "relative"
-  },
-
-  logo: {
-    backgroundRepeat: "no-repeat",
-    height: "69px",
-    width: "110px",
-
-    "@media (max-width: 768px)": {
-      height: "90px",
-      margin: "0 0 35px 0"
-    }
-  },
-  socialMediaIconContainer: {
-    display: "flex",
-    fontSize: "25px",
-    justifyContent: "space-around",
-    width: "200px",
-
-    "@media (max-width: 768px)": {
-      fontSize: "35px",
-      margin: "0 0 35px 0",
-      width: "180px"
-    }
-  }
-});

@@ -9,10 +9,9 @@ import LinksDesktop from "./links/desktop";
  */
 
 class Header extends React.Component<RouteComponentProps, any> {
-
   private styles = this.getStyles();
 
-  public constructor(props: RouteComponentProps){
+  public constructor(props: RouteComponentProps) {
     super(props);
     this.onLogoClick = this.onLogoClick.bind(this);
   }
@@ -24,7 +23,7 @@ class Header extends React.Component<RouteComponentProps, any> {
   public render() {
     return (
       <div className={css(this.styles.container)}>
-        <div className={css(this.styles.logo)} onClick={this.onLogoClick}/>
+        <div className={css(this.styles.logo)} onClick={this.onLogoClick} />
         <div className={css(this.styles.links)}>
           <LinksDesktop />
         </div>
@@ -35,8 +34,8 @@ class Header extends React.Component<RouteComponentProps, any> {
     );
   }
 
-  private onLogoClick(){
-    const {history} = this.props;
+  private onLogoClick() {
+    const { history } = this.props;
     history.push("/");
   }
 
@@ -51,10 +50,10 @@ class Header extends React.Component<RouteComponentProps, any> {
         boxShadow: "0 4px 7px 0 rgba(0, 0, 0, 0.2)",
         display: "flex",
         height: "102px",
-        width: "100%",
+        width: "100%"
       },
       links: {
-        display: "inline-block",
+        display: "inline-block"
       },
       logo: {
         backgroundColor: "#000000",
@@ -62,7 +61,7 @@ class Header extends React.Component<RouteComponentProps, any> {
         display: "inline-block",
         height: "50px",
         margin: "0 10px 0 10px",
-        width: "50px",
+        width: "50px"
       },
       signIn: {
         display: "inline-block",

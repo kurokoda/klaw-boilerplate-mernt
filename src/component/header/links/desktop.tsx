@@ -64,5 +64,5 @@ const styles = StyleSheet.create({
     fontSize: "16px",
     margin: "0 10px 0 0",
     padding: "5px"
-  },
+  }
 });
