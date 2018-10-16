@@ -33,7 +33,7 @@ class Footer extends React.Component<any, any> {
             </a>
             <a
               href="http://www.instagram.com"
-              className={css(styles.contentColor)}
+              className={css(this.styles.contentColor)}
             >
               <i className="fab fa-instagram" />
             </a>

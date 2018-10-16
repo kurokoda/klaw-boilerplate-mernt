@@ -2,7 +2,7 @@ import { css, StyleSheet } from "aphrodite/no-important";
 import * as React from "react";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
-import ROUTES from "../../../constants/route";
+import { PAGES } from "../../../constants/route";
 import { getIncrementedElementName } from "../../../utils/collection";
 
 /**
@@ -20,16 +20,16 @@ class LinksDesktop extends React.Component<any, any> {
     const { onNavLinkClick } = this.props;
     return (
       <div>
-        {ROUTES.map(ROUTE => (
+        {PAGES.map(PAGE => (
           <NavLink
-            key={getIncrementedElementName("desktopLink")}
-            to={ROUTE.PATH}
+            key={getIncrementedElementName("link")}
+            to={PAGE.PATH}
             onClick={onNavLinkClick}
             onKeyDown={onNavLinkClick}
             activeClassName={css(styles.activeLink)}
             className={css(styles.link)}
           >
-            {ROUTE.NAME.toUpperCase()}
+            {PAGE.NAME.toUpperCase()}
           </NavLink>
         ))}
       </div>

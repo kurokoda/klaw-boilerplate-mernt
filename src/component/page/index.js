@@ -1,7 +1,9 @@
+import About from "./about";
 import Error from "./error";
 import Home from "./home";
-import About from "./about";
+import SignUp from "./signup";
 
 export const AboutPage = About;
-export const HomePage = Home;
 export const ErrorPage = Error;
+export const HomePage = Home;
+export const SignUpPage = SignUp;

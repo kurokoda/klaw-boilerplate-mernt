@@ -2,7 +2,7 @@ import { css, StyleSheet } from "aphrodite";
 import * as React from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import SignInForm from "../form/signIn";
-import LinksDesktop from "./links/desktop";
+import LinksDesktop from "./links";
 
 /**
  * The application header component. Contains page links.
